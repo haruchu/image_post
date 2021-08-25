@@ -1,2 +1,1 @@
-"# image_post" 
-"# image_post" 
+#画像保存・表示の練習
