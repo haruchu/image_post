@@ -19,8 +19,6 @@ def index(request):
 def post(request):
   form = ImageForm(request.POST, request.FILES)
   if form.is_valid():
-    post = form.save(commit=False)
-    post.file_name = str(post.created_date)+ "_" + str(uuid.uuid4()) + ".png"
     post = form.save()
     return redirect('/')
   return render(request, 'index.html', {'form': form})

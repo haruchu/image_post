@@ -7,15 +7,15 @@
   <title>Document</title>
 </head>
 <body>
-  <form method="POST" action="{%url 'post:post' %}" enctype="multipart/form-data">
+  <form method="POST" action="{% url 'post:post' %}" enctype="multipart/form-data">
     {% csrf_token %}
 
     {{form.as_p}}
     {{ form.media }}
     <input type="submit" value="送信">
   </form>
-  {% for image in images %}
-    <p>{{image.title}}</p>
+  {% for i in images %}
+    <a href={{i.image.url}}>{{i.title}}</a><br/>
   {% endfor %}
 
 </body>
