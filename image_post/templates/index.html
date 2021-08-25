@@ -15,7 +15,7 @@
     <input type="submit" value="送信">
   </form>
   {% for i in images %}
-    <a href={{i.image.url}}>{{i.title}}</a><br/>
+    <a href={{i.image.url}}><img src={{i.image.url}} width=80 height=80></a>
   {% endfor %}
 
 </body>
